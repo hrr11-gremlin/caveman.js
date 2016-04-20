@@ -21,7 +21,17 @@ var floor = function(number) {
 // This one rounds up. Your solution may differ from mine. 
 // Just make sure it works.
 var ceiling = function(number) {
+  var r = number % 1;
 
+  if (r === 0) {
+    return number;
+  }
+
+  if (number < 0) {
+    return number - r;
+  }
+
+  return number + (1 - r);
 };
 
 
